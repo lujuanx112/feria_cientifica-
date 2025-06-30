@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Feria Científica</title>
+  <style>
+    :root {
+      --primario: #0f172a;
+      --secundario: #1e40af;
+      --acento: #6366f1;
+      --fondo: #0a0a23;
+      --texto: #e0e7ff;
+      --gris: #1e293b;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--secundario), var(--acento));
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 0 10px #00000066;
+    }
+
+    nav {
+      background: var(--primario);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+      border-bottom: 2px solid var(--acento);
+    }
+
+    nav a {
+      color: var(--texto);
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--acento);
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 2.5rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: var(--gris);
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+      margin-top: 2rem;
+      animation: fadeSlideIn 1s ease-out both;
+    }
+
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: var(--acento);
+      border-left: 4px solid var(--acento);
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .comentarios {
+      background: #1c1c3c;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .comentario {
+      background: #0f172a;
+      color: var(--texto);
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      border-left: 4px solid var(--acento);
+      border-radius: 5px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    form input[type="text"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      border: 1px solid #334155;
+      background-color: #0f172a;
+      color: var(--texto);
+      font-size: 1rem;
+    }
+
+    form button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--acento);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: var(--secundario);
+    }
+
+    .simulacion {
+      text-align: center;
+      padding-top: 2rem;
+    }
+
+    .boton-interactivo {
+      background: var(--acento);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 1.5rem;
+    }
+
+    .boton-interactivo:hover {
+      background: var(--secundario);
+      transform: scale(1.05);
+    }
+
+    .mano-svg {
+      margin-top: 2rem;
+      max-width: 200px;
+      filter: drop-shadow(0 0 10px var(--acento));
+      transition: transform 0.3s ease;
+    }
+
+    .mano-activa {
+      transform: rotate(10deg) scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background: var(--primario);
+      color: var(--texto);
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-top: 2px solid var(--acento);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Proyecto: Mano Robótica Controlada con Arduino</h1>
+    <p>Explorando el futuro de la robótica con cinco servomotores</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre el Proyecto</a>
+    <a href="#metodo">Metodología</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#galeria">Galería</a>
+    <a href="#comentarios">Comentarios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre el Proyecto</h2>
+    <p>La sustitución por pérdida de miembros humanos por artefactos distintos a los naturales es una realidad desde hace más de dos mil años. Con el tiempo, los inventos en los campos de la robótica, en particular de la biónica, han proporcionado al ser humano extremidades complementarias que cada día se perfeccionan.</p>
+  <p>El mayor inconveniente que tienen las personas con discapacidad son los desafíos sociales que pueden afectar claramente su autoestima, son víctimas de discriminación, lo que afecta su vida laboral, ya que no todas las empresas brindan la posibilidad de demostrar su capacidad. A través de la carrera de Mecatrónica, niños y jóvenes con discapacidad física pueden aumentar su productividad e inclusión en la sociedad.</p>
+  <p>En el centro fomentamos la inclusión y eso es lo que transmitimos a cada uno de los pacientes.</p>
+  <p>Benyi Recarte, directora regional de Teletón, y Barón Mejía, jefe del área, mencionaron que son pocas las instituciones como Teletón que disponen de este beneficio para la ciudadanía, tomando en cuenta que el costo del aparato en este centro es 70% menor al que se cotiza en un hospital privado.</p>
+  <p>Desde 2001 que se instaló la tecnología, han entregado más de 3,000 prótesis y cerca de 5,000 órtesis a quienes más lo necesitan.</p>
+    </section>
+
+  <section id="metodo">
+  <h2>Metodología</h2>
+  <p>Para la elaboración de la mano robótica basada en Arduino, seguimos los siguientes pasos:</p>
+  <ol>
+    <li>
+      <strong>Diseño del prototipo:</strong> Se investigaron modelos funcionales de manos robóticas y se realizó un diseño que simulara los movimientos naturales de una mano humana.
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0;">
+        <img src="c:\Users\User\Pictures\Screenshots\Captura de pantalla 2025-06-30 055158.png" alt="Diseño de prototipo 1" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        <img src="c:\Users\User\Pictures\Screenshots\Captura de pantalla 2025-06-30 055316.png" alt="Diseño de prototipo 2" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      </div>
+    </li>
+    <li>
+      <strong>Selección de materiales:</strong> Se utilizaron cinco servomotores, una placa Arduino UNO, cables jumper, cartón, hilo nylon y elementos reciclables como base para la estructura.
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0;">
+        <img src="c:\Users\User\Downloads\materiales.jpg" alt="Materiales utilizados 1" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        <img src="c:\Users\User\Downloads\materiales 2.jpg" alt="Materiales utilizados 2" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      </div>
+    </li>
+    <li>
+      <strong>Montaje de la estructura:</strong> Se construyó la mano con dedos articulados y un sistema de tracción con hilo que permite el movimiento mediante la rotación de los servos.
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0;">
+        <img src="images/montaje1.jpg" alt="Montaje de estructura 1" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        <img src="images/montaje2.jpg" alt="Montaje de estructura 2" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      </div>
+    </li>
+    <li>
+      <strong>Programación en Arduino:</strong> Se desarrolló un código para controlar los servomotores de forma individual utilizando señales digitales que simulan la apertura y cierre de los dedos.
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0;">
+        <img src="c:\Users\User\Pictures\Screenshots\Captura de pantalla 2025-06-30 055544.png" alt="Programación Arduino 1" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        <img src="c:\Users\User\Pictures\Screenshots\Captura de pantalla 2025-06-30 055556.png" alt="Programación Arduino 2" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      </div>
+    </li>
+    <li>
+      <strong>Integración con sensores (opcional):</strong> Se consideró el uso de sensores en un guante para captar los movimientos reales de una mano humana y replicarlos en la robótica.
+    </li>
+    <li>
+      <strong>Pruebas y ajustes:</strong> Se realizaron pruebas de movimiento, correcciones de ángulos, velocidad y calibración de los servos para garantizar un funcionamiento estable.
+    </li>
+  </ol>
+  <p>Todo el proceso se realizó fomentando la creatividad, el reciclaje y la aplicación de principios básicos de mecatrónica y programación.</p>
+</section>
+
+  <section id="resultados">
+    <h2>Resultados y Conclusiones</h2>
+    <p>Se logró replicar movimientos básicos de los dedos, abriendo posibilidades para el desarrollo de prótesis accesibles o aplicaciones educativas en robótica. El sistema es funcional y escalable.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <p>.</p>
+    <img src="images/montaje1.jpg" alt="Montaje de estructura 1" style="max-width: 45%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+
+  </section>
+
+  <section class="simulacion">
+    <h2>Simulación Interactiva</h2>
+    <p>Haz clic en el botón para simular el movimiento de la mano robótica:</p>
+    <button class="boton-interactivo" onclick="document.getElementById('mano').classList.toggle('mano-activa')">Activar Mano</button>
+    <div>
+      <img id="mano" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Robot_hand_icon.svg" alt="Mano Robótica" class="mano-svg">
+    </div>
+  </section>
+
+  <section id="comentarios">
+    <h2>Comentarios</h2>
+    <div class="comentarios">
+      <div class="comentario">Impresionante cómo logran imitar la mano humana. ¡Buen trabajo! — Prof. Ramírez</div>
+      <div class="comentario">¿Se puede adaptar este sistema a una prótesis real? — Alumna Sofía</div>
+      <form>
+        <input type="text" placeholder="Escribe tu comentario">
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Correo: pepe25032007@gmail.com</p>
+    <p>Centro Educativo: Instituto Tecnico Francisco Morazan</p>
+  </section><section id="integrantes" style="margin-top: 3rem; padding: 2rem; background-color: #1e293b; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.5); text-align: center; color: #e0e7ff;">
+  <h2 style="color: #60a5fa; font-size: 2rem; margin-bottom: 1rem;">Integrantes del Grupo</h2>
+  <ul style="list-style: none; padding: 0; font-size: 1.2rem;">
+    <li style="margin: 0.5rem 0;">🔹 Luis Juanes</li>
+    <li style="margin: 0.5rem 0;">🔹 Angely Marcela</li>
+    <li style="margin: 0.5rem 0;">🔹 Khateryn Nuñez </li>
+    <li style="margin: 0.5rem 0;">🔹 Gimena Velasquez</li>
+        <li style="margin: 0.5rem 0;">🔹 Fernanda Santos</li>
+            <li style="margin: 0.5rem 0;">🔹 Sara Nuñez</li>
+            <li style="margin: 0.5rem 0;">🔹 Heysel Gonzales</li>
+  </ul>
+</section>
+  <footer>
+    <p>&copy; 2025 Proyecto de Feria Científica - Mano Robótica</p>
+  </footer>
+</body>
+</html>
